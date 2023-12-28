@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+int basamak, sayi, toplam = 0;
+
+printf("3 basamakli bir sayi girin: ");
+scanf("%d", &sayi);
+
+basamak = sayi % 10;
+toplam += basamak * basamak * basamak;
+sayi /= 10;
+
+basamak = sayi % 10;
+toplam += basamak * basamak * basamak;
+sayi /= 10;
+
+basamak = sayi % 10;
+toplam += basamak * basamak * basamak;
+
+if (toplam == sayi) {
+    printf("Basamaklarin kupleri toplami %d sayisina esittir.", sayi);
+} else {
+    printf("Basamaklarin kupleri toplami %d sayisina esit degildir.", sayi);
+}
+
+return 0;
+}
